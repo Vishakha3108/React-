@@ -1,0 +1,44 @@
+   let count = 0;
+   const [counter, setCounter] = useState(0);
+   function clickedIncrement(){
+    count += 1;
+    console.log("Clicked on increment",count);
+   }
+   function clickedDecrement(){
+    count -= 0;
+    console.log("Clicked on decrement", count);
+   }
+   function clickedCounterIncrement(){
+    setCounter(counter+1)
+    console.log("Clicked on counter increment", count);
+   }
+   function clickedCounterDecrement(){
+    setCounter(counter-1)
+    console.log("Clicked on counter decrement", count);
+
+
+
+
+    const [todos, setTodos] = useState(['todo 1', 'todo 2']);
+    
+
+return
+    <div>
+        value of count: {count}
+      </div>
+      <button onClick={clickedIncrement}>Increment</button>
+      <button onClick={clickedDecrement}>Decrement</button>
+      <div>
+        value of counter: {counter}
+      </div>
+      <button onClick={clickedCounterIncrement}>Increment</button>
+     <button onClick={clickedCounterDecrement}>Decrement</button>  
+
+
+
+
+
+     <h1>Todo List</h1>
+       {todos.map((value) => <li>{value}</li>)}
+
+       <button onClick={() => setTodos([...todos, 'todo 3' ])}>click</button>
