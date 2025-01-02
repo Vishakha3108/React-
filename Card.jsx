@@ -1,10 +1,20 @@
+import { useState } from "react";
 import Icon from "../Icon/Icon";
 import './Card.css'
 
-function Card({ iconname }) {
+function Card({ onPlay, player, index }) {
+
+    let icon = <Icon/>
+    if(player == "X") {
+        icon = <Icon name={"cross"} />
+    } else if (player == "O"){
+        icon = <Icon name={"circle"} />
+    }
+
     return (
-        <div className="card">
-            <Icon name={iconname}></Icon>
+        <div className="card" onClick={() => onPlay(index)}>
+            {icon}
+
         </div>
     )
 }
