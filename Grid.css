@@ -1,3 +1,8 @@
+
+.grid-wrapper {
+    max-width: 500px;
+
+}
 .grid {
     display: flex;
     gap: "1rem";
@@ -6,4 +11,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+}
+.turn-highlight {
+    color: white;
+}
+.reset{
+    padding: 1rem;
+    color: white;
+    background-color: #28a745;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
 }
